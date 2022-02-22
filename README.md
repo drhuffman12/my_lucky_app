@@ -10,3 +10,4 @@ Based on:
 
 See also:
 * https://discord.com/channels/743896265057632256/743896265057632259/945502280298430534
+* `Lucky::RouteNotFoundError` error re `Could not find route matching GET /js/bootstrap.esm.js.map`: https://discord.com/channels/743896265057632256/743896265057632259/945527071424258108
