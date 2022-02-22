@@ -26,6 +26,7 @@ abstract class AuthLayout
 
     html class: "h-100", lang: "en" do
       mount Shared::LayoutHead, page_title: page_title
+      mount Shared::Nav
 
       body class: "d-flex flex-column h-100" do
         mount Shared::FlashMessages, context.flash
