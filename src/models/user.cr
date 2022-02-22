@@ -5,6 +5,8 @@ class User < BaseModel
   table do
     column email : String
     column encrypted_password : String
+
+    has_many fortunes : Fortune
   end
 
   def emailable : Carbon::Address
