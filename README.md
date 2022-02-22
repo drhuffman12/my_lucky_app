@@ -8,4 +8,5 @@ Based on:
   See: [README.ref.md](README.ref.md])
 * [Lucky Beginners Tutorial](https://luckyframework.org/guides/tutorial/overview)
 
-
+See also:
+* https://discord.com/channels/743896265057632256/743896265057632259/945502280298430534
