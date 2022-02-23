@@ -3,7 +3,7 @@ abstract class MainLayout
 
   # 'needs current_user : User' makes it so that the current_user
   # is always required for pages using MainLayout
-  needs current_user : User
+  needs current_user : User?
 
   abstract def content
   abstract def page_title
@@ -28,19 +28,25 @@ abstract class MainLayout
 
     html lang: "en" do
       mount Shared::LayoutHead, page_title: page_title
-      mount Shared::Nav
+      mount Shared::Nav, current_user: current_user
 
       body do
         mount Shared::FlashMessages, context.flash
-        render_signed_in_user
+        render_signed_in_user(current_user)
         content
       end
     end
   end
 
-  private def render_signed_in_user
-    text current_user.email
+  private def render_signed_in_user(user : User)
+    text user.email
     text " - "
     link "Sign out", to: SignIns::Delete, flow_id: "sign-out-button"
+  end
+
+  private def render_signed_in_user(no_user : Nil)
+    text "no@one.yet"
+    text " - "
+    link "Sign in", to: SignIns::Create, flow_id: "sign-out-button"
   end
 end

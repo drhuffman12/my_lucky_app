@@ -1,9 +1,5 @@
 # class Home::IndexPage < MainLayout
 class Home::IndexPage < AuthLayout
-  # def content
-  #   h1 "Modify this page at ./src/pages/home"
-  #   h2 "Hello World!"
-  # end
   def content
     div class: "px-4 py-5 my-5 text-center" do
       h1 "CloverApp", class: "display-5 fw-bold"

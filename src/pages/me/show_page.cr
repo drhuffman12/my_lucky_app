@@ -1,8 +1,16 @@
 class Me::ShowPage < MainLayout
   def content
     h1 "This is your profile"
-    h3 "Email:  #{@current_user.email}"
+    user_email(@current_user)
     helpful_tips
+  end
+
+  private def user_email(user : User)
+    h3 "Email:  #{user.email}"
+  end
+
+  private def user_email(no_user : Nil)
+    h3 "Email:  (tbd)"
   end
 
   private def helpful_tips
