@@ -1,11 +1,19 @@
 class Fortunes::ShowPage < MainLayout
   needs fortune : Fortune
+  # needs current_user : User?
+
   quick_def page_title, "Fortune with id: #{fortune.id}"
 
   def content
     link "Back to all Fortunes", Fortunes::Index
     h1 "Fortune with id: #{fortune.id}"
-    render_actions
+
+    if cu = current_user
+      if fortune.user_id == cu.id
+        render_actions
+      end
+    end
+
     render_fortune_fields
   end
 
