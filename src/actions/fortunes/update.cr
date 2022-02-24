@@ -1,7 +1,7 @@
 class Fortunes::Update < BrowserAction
   put "/fortunes/:fortune_id" do
     fortune = FortuneQuery.find(fortune_id)
-    SaveFortune.update(fortune, params) do |operation, updated_fortune|
+    SaveFortune.update(fortune, params, current_user: current_user) do |operation, updated_fortune|
       if operation.saved?
         flash.success = "The record has been updated"
         redirect Show.with(updated_fortune.id)
