@@ -25,6 +25,16 @@ class Db::Seed::SampleData < LuckyTask::Task
     #   SignUpUser.create!(email: "me@example.com", password: "test123", password_confirmation: "test123")
     # end
     # ```
+
+    2.times do
+      user = UserFactory.create
+
+      2.times do
+        # override the default user_id
+        FortuneFactory.create(&.user_id(user.id))
+      end
+    end
+
     puts "Done adding sample data"
   end
 end
