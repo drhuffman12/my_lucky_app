@@ -28,6 +28,10 @@ class Errors::Show < Lucky::ErrorAction
     end
   end
 
+  def render(error : OnlyAllowCurrentUser::UnauthorizedEntryError)
+    error_html "You're not authorized to do this", status: 401
+  end
+
   # Always keep this below other 'render' methods or it may override your
   # custom 'render' methods.
   def render(error : Lucky::RenderableError)
