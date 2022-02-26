@@ -32,9 +32,10 @@ See also:
   * As per Jeremy Woertink at https://discord.com/channels/743896265057632256/743896265057632259/945528217345859635:
 
         the map files usually fail because they're not set in the mix-manifest.json file. We may have to look at that again, but I don't think it causes any issues other than log noise
-  * Resolved by adding files from "https://github.com/twbs/bootstrap/blob/main/dist/js/*.min.js*" into "public/js";
+  * RESOLVED by adding files from "https://github.com/twbs/bootstrap/blob/main/dist/js/*.min.js*" into "public/js";
     in particular "bootstrap.esm.js.map".
-* `Using Components` (https://luckyframework.org/guides/tutorial/components)
-  * Adding a nav bar
-    * based on: https://www.w3schools.com/bootstrap/bootstrap_navbar.asp
-    * Nav bar is supposed to be horizontal, but is vertical; why?
+
+* Nav bar is supposed to be horizontal, but is vertical; why?
+  * `Using Components` (https://luckyframework.org/guides/tutorial/components)
+    * Adding a nav bar
+      * based on: https://www.w3schools.com/bootstrap/bootstrap_navbar.asp
