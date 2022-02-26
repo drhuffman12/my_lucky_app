@@ -10,6 +10,11 @@ Based on:
 
 See also:
 * https://discord.com/channels/743896265057632256/743896265057632259/945502280298430534
+
+---
+
+## Fixes
+
 * `Lucky::RouteNotFoundError` error re `Could not find route matching GET /js/bootstrap.esm.js.map`: https://discord.com/channels/743896265057632256/743896265057632259/945527071424258108
   ```
   app_1       | web          | GET / ()
@@ -32,3 +37,4 @@ See also:
 * `Using Components` (https://luckyframework.org/guides/tutorial/components)
   * Adding a nav bar
     * based on: https://www.w3schools.com/bootstrap/bootstrap_navbar.asp
+    * Nav bar is supposed to be horizontal, but is vertical; why?
